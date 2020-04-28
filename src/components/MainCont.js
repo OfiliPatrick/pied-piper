@@ -3,9 +3,9 @@ import PropNav from "./PropNav";
 import PipeParams from "./PipeParams";
 import FluidCond from "./FluidCond";
 import PumpSpecs from "./PumpSpecs";
-import Comments from "./Comments";
+import Documentation from "./Documentation";
 import { useSelector, useDispatch } from "react-redux";
-import PropTypes from "prop-types";
+// import PropTypes from "prop-types";
 import { calculatePipeSize } from "../actions/mainContActions";
 
 const MainCont = () => {
@@ -52,7 +52,7 @@ const MainCont = () => {
                   <PipeParams />
                   <FluidCond />
                   <PumpSpecs />
-                  <Comments />
+                  <Documentation />
                 </div>
                 <div className="wizard-footer">
                   <div className="pull-right">

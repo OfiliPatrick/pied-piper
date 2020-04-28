@@ -1,12 +1,12 @@
 import { combineReducers } from 'redux';
 import pipeParamsRed from './pipeParamsRed'
 import fluidCondRed from './fluidCondRed';
-import commentRed from './commentRed'
+import documentationRed from './documentationRed'
 
 
 export default combineReducers({
    pipeParams: pipeParamsRed,
    fluidCond: fluidCondRed,
-   comment: commentRed
+   documentation: documentationRed
     
 })

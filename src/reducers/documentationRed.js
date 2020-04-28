@@ -1,12 +1,12 @@
-import { ON_COMMENT_CHANGE } from "../actions/types";
+import { ON_DOCUMENTATION_CHANGE } from "../actions/types";
 
 const initialState = {
- commentText: ""
+  docText: "",
 };
 
 export default function (state = initialState, action) {
   switch (action.type) {
-    case ON_COMMENT_CHANGE:
+    case ON_DOCUMENTATION_CHANGE:
       return {
         ...state,
         [action.payload.fieldId]: action.payload.fieldValue,

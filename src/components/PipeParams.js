@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 import { onPipeParamsChange } from "../actions/pipeParamsActions";
 
 const PipeParams = () => {
+
   const schedule = useSelector((store) => store.schedule);
   const straightLength = useSelector((store) => store.straightLength);
   const roughness = useSelector((store) => store.roughness);
@@ -20,7 +21,7 @@ const PipeParams = () => {
       <div className="row">
         <div className="col-sm-12">
           <h4 className="info-text">
-            Enter your Pipes Physical Specifications
+            Enter your Pipe's Physical Specifications
           </h4>
         </div>
         <div className="col-sm-5 col-sm-offset-1">

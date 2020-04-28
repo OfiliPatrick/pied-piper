@@ -71,7 +71,7 @@ const FluidCond = () => {
         </div>
         <div className="col-sm-5">
           <div className="form-group label-floating">
-            <label className="control-label">Pump Discahrge</label>
+            <label className="control-label">Pump Discharge</label>
             <div className="input-group">
               <input
                 value={pumpDischarge}
@@ -95,7 +95,7 @@ const FluidCond = () => {
             />
           </div>
         </div>
-        <div className="col-sm-5">
+        {/* <div className="col-sm-5">
           <div className="form-group label-floating">
             <label className="control-label">Friction Factor</label>
             <input
@@ -104,7 +104,7 @@ const FluidCond = () => {
               id="exampleInputEmail1"
             />
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );

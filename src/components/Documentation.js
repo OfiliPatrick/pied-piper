@@ -1,31 +1,31 @@
-import React, { useCallback} from "react";
+import React, { useCallback } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import PropTypes from "prop-types";
-import { onCommentChange } from "../actions/commentActions";
+import { onDocumentationChange } from "../actions/DocActions";
 
-const Comments = () => {
+const Documentation = () => {
+  const docText = useSelector((store) => store.commentText);
 
-   const commentText = useSelector((store) => store.commentText);
-   
-   const actionDispatch = useDispatch();
-   const onCommentChangeDispatch = useCallback(
-     (fieldId, fieldValue) =>
-       actionDispatch(onCommentChange(fieldId, fieldValue)),
-     [actionDispatch]
-   );
+  const actionDispatch = useDispatch();
+  const onDocumentationChangeDispatch = useCallback(
+    (fieldId, fieldValue) =>
+      actionDispatch(onDocumentationChange(fieldId, fieldValue)),
+    [actionDispatch]
+  );
   return (
-    <div className="tab-pane" id="comments">
+    <div className="tab-pane" id="documentation">
       <div className="row">
         <h4 className="info-text"> Document your sizing process.</h4>
         <div className="col-sm-6 col-sm-offset-1">
           <div className="form-group">
             <label>Sizing Description</label>
             <textarea
+              value={docText}
               className="form-control"
               placeholder=""
               rows="6"
               onChange={(e) =>
-                onCommentChangeDispatch("commentText", e.target.value)
+                onDocumentationChangeDispatch("docText", e.target.value)
               }
             ></textarea>
           </div>
@@ -38,10 +38,9 @@ const Comments = () => {
   );
 };
 
-
-Comments.propTypes = {
-  commentText: PropTypes.object.isRequired,
+Documentation.propTypes = {
+  docText: PropTypes.object.isRequired,
   onCommentChange: PropTypes.func.isRequired,
 };
 
-export default Comments;
+export default Documentation;

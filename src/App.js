@@ -18,8 +18,8 @@ class App extends Component {
       <Provider store={store}>
         <Router>
           <div>
-            <Route exact path="/results" component={Results} />
             <FullCont />
+            <Route exact path="/results" component={Results} />
           </div>
         </Router>
       </Provider>

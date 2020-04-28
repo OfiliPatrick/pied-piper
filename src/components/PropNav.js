@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 
 const PropNav = () => {
   return (
@@ -6,22 +6,22 @@ const PropNav = () => {
       <ul>
         <li>
           <a href="#pipe_params" data-toggle="tab">
-            Pipe Parameter
+            Pipe Parameters
           </a>
         </li>
         <li>
           <a href="#fluid_conditions" data-toggle="tab">
-            Fluid Condition
+            Fluid Conditions
           </a>
         </li>
-        <li>
+        {/* <li>
           <a href="#pump_specs" data-toggle="tab">
             Pump Specs
           </a>
-        </li>
+        </li> */}
         <li>
-          <a href="#comments" data-toggle="tab">
-            Comments
+          <a href="#documentation" data-toggle="tab">
+            Documentation
           </a>
         </li>
       </ul>
