@@ -1,13 +1,13 @@
 import React, { useCallback } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import PropTypes from "prop-types";
+// import PropTypes from "prop-types";
 import { onPipeParamsChange } from "../actions/pipeParamsActions";
 
 const PipeParams = () => {
-
-  const schedule = useSelector((store) => store.schedule);
-  const straightLength = useSelector((store) => store.straightLength);
-  const roughness = useSelector((store) => store.roughness);
+  const schedule = useSelector((store) => store.pipeParams.schedule);
+  const straightLength = useSelector((store) => store.pipeParams.straightLength);
+  const roughness = useSelector((store) => store.pipeParams.roughness);
+  const material = useSelector((store) => store.pipeParams.material);
 
   const actionDispatch = useDispatch();
   const onPipeParamsChangeDispatch = useCallback(
@@ -67,9 +67,11 @@ const PipeParams = () => {
                 type="text"
                 className="form-control"
                 name="roughness"
-                onChange={(e) =>
-                  onPipeParamsChangeDispatch("roughness", e.target.value)
-                }
+                // onChange={onRough}
+                onChange={(e) => {
+                  console.log(schedule);
+                  onPipeParamsChangeDispatch("roughness", e.target.value);
+                }}
               />
               <span className="input-group-addon">E</span>
             </div>
@@ -78,12 +80,18 @@ const PipeParams = () => {
         <div className="col-sm-5">
           <div className="form-group label-floating">
             <label className="control-label">Material</label>
-            <select name="country" className="form-control">
+            <select
+              name="material"
+              value={material}
+              className="form-control"
+              onChange={(e) =>
+                onPipeParamsChangeDispatch("material", e.target.value)
+              }
+            >
               <option disabled="" value=""></option>
-              <option value="Afghanistan"> Iron Steel </option>
-              <option value="Albania"> Copper </option>
-              <option value="Algeria"> Cast Iron </option>
-              <option value="Antarctica"> Stainless Steel</option>
+              <option value="ironSteel"> Iron Steel </option>
+              <option value="copper"> Copper </option>
+              <option value="stainlessSteel"> Stainless Steel</option>
               <option value="...">...</option>
             </select>
           </div>
@@ -103,11 +111,11 @@ const PipeParams = () => {
   );
 };
 
-PipeParams.propTypes = {
-  schedule: PropTypes.object.isRequired,
-  length: PropTypes.object.isRequired,
-  rough: PropTypes.object.isRequired,
-  onPipeParamsChange: PropTypes.func.isRequired,
-};
+// PipeParams.propTypes = {
+//   schedule: PropTypes.object.isRequired,
+//   length: PropTypes.object.isRequired,
+//   rough: PropTypes.object.isRequired,
+//   onPipeParamsChange: PropTypes.func.isRequired,
+// };
 
 export default PipeParams;

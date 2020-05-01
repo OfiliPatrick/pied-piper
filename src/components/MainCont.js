@@ -10,28 +10,24 @@ import { calculatePipeSize } from "../actions/mainContActions";
 
 const MainCont = () => {
  
-  const schedule = useSelector((store) => store.schedule);
-  const straightLength = useSelector((store) => store.straightLength);
-  const roughness = useSelector((store) => store.roughness);
-  const flowRate = useSelector((store) => store.flowRate);
-  const density = useSelector((store) => store.density);
-  const viscosity = useSelector((store) => store.viscosity);
-  const pumpDischarge = useSelector((store) => store.pumpDischarge);
-  const commentText = useSelector((store) => store.commentText);
+  const schedule = useSelector((store) => store.pipeParams.schedule);
+  const straightLength = useSelector((store) => store.pipeParams.straightLength);
+  const roughness = useSelector((store) => store.pipeParams.roughness);
+  const flowRate = useSelector((store) => store.fluidCond.flowRate);
+  const density = useSelector((store) => store.fluidCond.density);
+  const viscosity = useSelector((store) => store.fluidCond.viscosity);
+  const pumpDischarge = useSelector((store) => store.fluidCond.pumpDischarge);
+  const docText = useSelector((store) => store.documentation.docText);
+
+  const sizingInfo = { schedule, straightLength, roughness, flowRate, density, viscosity, pumpDischarge, docText }
+  console.log(sizingInfo)
 
   const actionDispatch = useDispatch();
   const calculatePipeSizeDispatch = useCallback(
-    (schedule, straightLength, roughness, flowRate, density, viscosity, pumpDischarge, commentText ) =>
+    (sizingInfo ) =>
       actionDispatch(
         calculatePipeSize(
-          schedule,
-          straightLength,
-          roughness,
-          flowRate,
-          density,
-          viscosity,
-          pumpDischarge,
-          commentText
+          sizingInfo
         )
       ),
     [actionDispatch]
@@ -70,18 +66,10 @@ const MainCont = () => {
                       // onClick={(e) => {
                       //   console.log("i have been clicked ooo");
                       // }}
-                      onClick={(e) =>
-                        calculatePipeSizeDispatch({
-                          schedule,
-                          straightLength,
-                          roughness,
-                          flowRate,
-                          density,
-                          viscosity,
-                          pumpDischarge,
-                          commentText,
-                        })
-                      }
+                      onClick={(e) => {
+                        console.log(sizingInfo)
+                        calculatePipeSizeDispatch(sizingInfo)
+                      }}
                     />
                   </div>
                   <div className="pull-left">

@@ -1,10 +1,10 @@
 import React, { useCallback } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import PropTypes from "prop-types";
+// import PropTypes from "prop-types";
 import { onDocumentationChange } from "../actions/DocActions";
 
 const Documentation = () => {
-  const docText = useSelector((store) => store.commentText);
+  const docText = useSelector((store) => store.documentation.docText);
 
   const actionDispatch = useDispatch();
   const onDocumentationChangeDispatch = useCallback(
@@ -38,9 +38,9 @@ const Documentation = () => {
   );
 };
 
-Documentation.propTypes = {
-  docText: PropTypes.object.isRequired,
-  onCommentChange: PropTypes.func.isRequired,
-};
+// Documentation.propTypes = {
+//   docText: PropTypes.object.isRequired,
+//   onDocumentationChange: PropTypes.func.isRequired,
+// };
 
 export default Documentation;

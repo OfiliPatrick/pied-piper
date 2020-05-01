@@ -1,13 +1,13 @@
 import React, { useCallback } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import PropTypes from "prop-types";
+// import PropTypes from "prop-types";
 import { onFluidCondChange } from "../actions/fluidCondActions";
 
 const FluidCond = () => {
-  const flowRate = useSelector((store) => store.flowRate);
-  const density = useSelector((store) => store.density);
-  const viscosity = useSelector((store) => store.viscosity);
-  const pumpDischarge = useSelector((store) => store.pumpDischarge);
+  const flowRate = useSelector((store) => store.fluidCond.flowRate);
+  const density = useSelector((store) => store.fluidCond.density);
+  const viscosity = useSelector((store) => store.fluidCond.viscosity);
+  const pumpDischarge = useSelector((store) => store.fluidCond.pumpDischarge);
 
   const actionDispatch = useDispatch();
   const onFluidCondChangeDispatch = useCallback(
@@ -110,12 +110,12 @@ const FluidCond = () => {
   );
 };
 
-FluidCond.propTypes = {
-  flowRate: PropTypes.object.isRequired,
-  density: PropTypes.object.isRequired,
-  viscosity: PropTypes.object.isRequired,
-  pumpDischarge: PropTypes.object.isRequired,
-  onFluidCondChange: PropTypes.func.isRequired,
-};
+// FluidCond.propTypes = {
+//   flowRate: PropTypes.object.isRequired,
+//   density: PropTypes.object.isRequired,
+//   viscosity: PropTypes.object.isRequired,
+//   pumpDischarge: PropTypes.object.isRequired,
+//   onFluidCondChange: PropTypes.func.isRequired,
+// };
 
 export default FluidCond;

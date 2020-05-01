@@ -4,6 +4,7 @@ const initialState = {
   schedule: "",
   straightLength: "",
   roughness: "",
+  material: ""
 };
 
 export default function (state = initialState, action) {

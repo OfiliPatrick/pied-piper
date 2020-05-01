@@ -18,7 +18,7 @@ class App extends Component {
       <Provider store={store}>
         <Router>
           <div>
-            <FullCont />
+            <Route exact path="/" component={FullCont} />
             <Route exact path="/results" component={Results} />
           </div>
         </Router>
