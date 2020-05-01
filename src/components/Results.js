@@ -1,17 +1,21 @@
 import React from "react";
+import { useSelector } from "react-redux";
 
 const Results = () => {
+  const internal_diameter = useSelector(
+    (store) => store.resultState.sizingResult.internal_diameter
+  );
+  
+  const flow_type = useSelector((store) => store.resultState.sizingResult.flow_type);
+  const area = useSelector((store) => store.resultState.area);
+  const docText = useSelector((store) => store.resultState.docText);
+  const reynolds_number = useSelector(
+    (store) => store.resultState.reynolds_number
+  );
+
+  console.log(internal_diameter)
   return (
     <div class="wrapper">
-      {/* <a href="http://creative-tim.com"></a>
-      <div class="logo-container">
-        <div class="logo">
-          <img src="assets/img/new_logo.png" />
-        </div>
-
-        <div class="brand">Creative Tim</div>
-      </div> */}
-
       <div class="container">
         <div class="row">
           <div class="col-md-8 col-md-offset-2">
@@ -55,7 +59,7 @@ const Results = () => {
                   <tr>
                     <td>1</td>
 
-                    <td>Dakota Rice</td>
+                    <td>{internal_diameter}</td>
 
                     <td>$36,738</td>
 
@@ -69,7 +73,7 @@ const Results = () => {
                   <tr>
                     <td>2</td>
 
-                    <td>Minerva Hooper</td>
+                    <td>{flow_type}</td>
 
                     <td>$23,789</td>
 

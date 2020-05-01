@@ -7,9 +7,13 @@ import Documentation from "./Documentation";
 import { useSelector, useDispatch } from "react-redux";
 // import PropTypes from "prop-types";
 import { calculatePipeSize } from "../actions/mainContActions";
+import { useHistory } from "react-router-dom";
+
+
 
 const MainCont = () => {
- 
+ let history = useHistory();
+
   const schedule = useSelector((store) => store.pipeParams.schedule);
   const straightLength = useSelector((store) => store.pipeParams.straightLength);
   const roughness = useSelector((store) => store.pipeParams.roughness);
@@ -18,9 +22,9 @@ const MainCont = () => {
   const viscosity = useSelector((store) => store.fluidCond.viscosity);
   const pumpDischarge = useSelector((store) => store.fluidCond.pumpDischarge);
   const docText = useSelector((store) => store.documentation.docText);
+  const isResultReady = useSelector((store) => store.resultState.isResultReady);
 
   const sizingInfo = { schedule, straightLength, roughness, flowRate, density, viscosity, pumpDischarge, docText }
-  console.log(sizingInfo)
 
   const actionDispatch = useDispatch();
   const calculatePipeSizeDispatch = useCallback(
@@ -32,6 +36,13 @@ const MainCont = () => {
       ),
     [actionDispatch]
   );
+
+  if (isResultReady) {
+    history.push('/results')
+  }
+
+
+
   return (
     <div className="container">
       <div className="row">
@@ -69,6 +80,7 @@ const MainCont = () => {
                       onClick={(e) => {
                         console.log(sizingInfo)
                         calculatePipeSizeDispatch(sizingInfo)
+                        console.log(isResultReady)
                       }}
                     />
                   </div>

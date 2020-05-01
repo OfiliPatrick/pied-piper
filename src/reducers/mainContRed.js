@@ -1,7 +1,7 @@
 import { CALCULATE_PIPE_SIZE } from "../actions/types";
 
 const initialState = {
-    sizingResult: {},
+  sizingResult: {},
     isResultReady: false
 };
 

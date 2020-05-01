@@ -6,7 +6,6 @@ export const calculatePipeSize = (sizingInfo) => (dispatch) => {
   axios
     .post("http://localhost:5000/api/results", sizingInfo)
     .then((res) => {
-      console.log(res)
       dispatch({
         type: CALCULATE_PIPE_SIZE,
         payload: res.data,
@@ -18,20 +17,3 @@ export const calculatePipeSize = (sizingInfo) => (dispatch) => {
   
 };
 
-
-
-
-
-
-// export const calculatePipeSize = (sizingInfo) => {
-//   console.log(sizingInfo);
-//   axios
-//     .post("http://localhost:5000/api/results", {
-//       firstName: "Finn",
-//       lastName: "Williams",
-//     })
-//   return {
-//     type: CALCULATE_PIPE_SIZE,
-//     payload: '',
-//   };
-// };
