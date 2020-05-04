@@ -1,16 +1,16 @@
-import React from 'react';
-import MainCont from './MainCont';
-import Footer from './Footer';
-import pipes from '../images/12.jpg';
-
+import React from "react";
+import MainCont from "./MainCont";
+import Footer from "./Footer";
+import { useSelector, useDispatch } from "react-redux";
+import { useHistory } from "react-router-dom";
 
 const FullCont = () => {
-    return (
-        <div className="image-container set-full-height" style= {{backgroundImage: `url(${pipes})`}}>
-                <MainCont />
-                <Footer/>
-            </div>
-    );
-}
+  return (
+    <div>
+      <MainCont />
+      <Footer />
+    </div>
+  );
+};
 
 export default FullCont;

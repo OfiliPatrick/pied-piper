@@ -9,39 +9,41 @@ import { useSelector, useDispatch } from "react-redux";
 import { calculatePipeSize } from "../actions/mainContActions";
 import { useHistory } from "react-router-dom";
 
-
-
 const MainCont = () => {
- let history = useHistory();
-
+  let history = useHistory();
   const schedule = useSelector((store) => store.pipeParams.schedule);
-  const straightLength = useSelector((store) => store.pipeParams.straightLength);
+  const straightLength = useSelector(
+    (store) => store.pipeParams.straightLength
+  );
   const roughness = useSelector((store) => store.pipeParams.roughness);
   const flowRate = useSelector((store) => store.fluidCond.flowRate);
   const density = useSelector((store) => store.fluidCond.density);
   const viscosity = useSelector((store) => store.fluidCond.viscosity);
   const pumpDischarge = useSelector((store) => store.fluidCond.pumpDischarge);
   const docText = useSelector((store) => store.documentation.docText);
-  const isResultReady = useSelector((store) => store.resultState.isResultReady);
 
-  const sizingInfo = { schedule, straightLength, roughness, flowRate, density, viscosity, pumpDischarge, docText }
+  const sizingInfo = {
+    schedule,
+    straightLength,
+    roughness,
+    flowRate,
+    density,
+    viscosity,
+    pumpDischarge,
+    docText,
+  };
 
   const actionDispatch = useDispatch();
   const calculatePipeSizeDispatch = useCallback(
-    (sizingInfo ) =>
-      actionDispatch(
-        calculatePipeSize(
-          sizingInfo
-        )
-      ),
+    (sizingInfo) => actionDispatch(calculatePipeSize(sizingInfo)),
     [actionDispatch]
   );
 
+  const isResultReady = useSelector((store) => store.resultState.isResultReady);
   if (isResultReady) {
-    history.push('/results')
+    console.log("was this called");
+    history.push("/results");
   }
-
-
 
   return (
     <div className="container">
@@ -78,9 +80,8 @@ const MainCont = () => {
                       //   console.log("i have been clicked ooo");
                       // }}
                       onClick={(e) => {
-                        console.log(sizingInfo)
-                        calculatePipeSizeDispatch(sizingInfo)
-                        console.log(isResultReady)
+                        console.log(sizingInfo);
+                        calculatePipeSizeDispatch(sizingInfo);
                       }}
                     />
                   </div>

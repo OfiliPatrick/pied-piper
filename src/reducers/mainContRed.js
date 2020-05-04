@@ -1,8 +1,9 @@
 import { CALCULATE_PIPE_SIZE } from "../actions/types";
+import { GO_BACK_TO_HOME } from "../actions/types";
 
 const initialState = {
   sizingResult: {},
-    isResultReady: false
+  isResultReady: false,
 };
 
 export default function (state = initialState, action) {
@@ -11,9 +12,16 @@ export default function (state = initialState, action) {
       return {
         ...state,
         isResultReady: true,
-        sizingResult : action.payload,
-  
+        sizingResult: action.payload,
       };
+
+    case GO_BACK_TO_HOME:
+      return {
+        ...state,
+        isResultReady: false,
+        sizingResult: {},
+      };
+    
 
     default:
       return state;

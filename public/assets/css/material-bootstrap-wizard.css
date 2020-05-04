@@ -25,7 +25,13 @@ body.inverse,
 body.inverse .form-control {
   color: #ffffff;
 }
+#result_header{
+  text-align: center;
+}
 
+#alertBtn{
+background-color: rebeccapurple ;
+}
 body.inverse .modal,
 body.inverse .modal .form-control,
 body.inverse .panel-default,
@@ -352,8 +358,8 @@ h2.title {
 }
 
 .wizard-card[data-color="purple"] .moving-tab {
-  background-color: #9c27b0;
-  box-shadow: 0 16px 26px -10px rgba(156, 39, 176, 0.56), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(156, 39, 176, 0.2);
+  background-color: rebeccapurple;
+  box-shadow: 0 16px 26px -10px rgba(30, 11, 33, 0.5607843137254902), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(156, 39, 176, 0.2);
 }
 
 .wizard-card[data-color="purple"] .picture:hover {
@@ -1479,7 +1485,7 @@ fieldset[disabled] .btn.btn-default.active {
 }
 
 .btn.btn-primary {
-  box-shadow: 0 2px 2px 0 rgba(156, 39, 176, 0.14), 0 3px 1px -2px rgba(156, 39, 176, 0.2), 0 1px 5px 0 rgba(156, 39, 176, 0.12);
+  box-shadow: 0 2px 2px 0 rgba(144, 141, 145, 0.561), 0 3px 1px -2px rgba(156, 39, 176, 0.2), 0 1px 5px 0 rgba(156, 39, 176, 0.12);
 }
 
 .btn.btn-primary,
@@ -1494,14 +1500,14 @@ fieldset[disabled] .btn.btn-default.active {
 .open>.btn.btn-primary.dropdown-toggle,
 .open>.btn.btn-primary.dropdown-toggle:focus,
 .open>.btn.btn-primary.dropdown-toggle:hover {
-  background-color: #9c27b0;
+  background-color: rebeccapurple;
   color: #FFFFFF;
 }
 
 .btn.btn-primary:focus,
 .btn.btn-primary:active,
 .btn.btn-primary:hover {
-  box-shadow: 0 14px 26px -12px rgba(156, 39, 176, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(156, 39, 176, 0.2);
+  box-shadow: 0 14px 26px -12px rgba(12, 4, 14, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(15, 3, 17, 0.2);
 }
 
 .btn.btn-primary.disabled,

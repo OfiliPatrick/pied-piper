@@ -37,6 +37,8 @@
     -ms-transform: rotate(360deg);
   }
 }
+
+
 .bootstrap-table .fixed-table-toolbar::after {
   content: "";
   display: block;
