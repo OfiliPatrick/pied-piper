@@ -1,7 +1,5 @@
-import React, { useCallback } from "react";
-import { useSelector, useDispatch } from "react-redux";
-import { useHistory } from "react-router-dom";
-import { goBackToHome } from "../actions/ResultsActions";
+import React from "react";
+import { useSelector } from "react-redux";
 const Results = () => {
   const internal_diameter = useSelector(
     (store) => store.resultState.sizingResult.internal_diameter
@@ -24,13 +22,10 @@ const Results = () => {
     (store) => store.pipeParams.straightLength
   );
   const roughness = useSelector((store) => store.pipeParams.roughness);
-  const material = useSelector((store) => store.pipeParams.material);
   const flowRate = useSelector((store) => store.fluidCond.flowRate);
   const density = useSelector((store) => store.fluidCond.density);
   const viscosity = useSelector((store) => store.fluidCond.viscosity);
-  const pumpDischarge = useSelector((store) => store.fluidCond.pumpDischarge);
-  let history = useHistory();
-  const actionDispatch = useDispatch();
+
 
   // const goBackToHomeDispatch = useDispatch(goBackToHome)
 
