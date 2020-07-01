@@ -53,25 +53,25 @@ const Results = () => {
   // }
 
   return (
-    <div class="wrapper">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-8 col-md-offset-2">
-            <div class="fresh-table full-color card">
-              <div class="toolbar">
+    <div className="wrapper">
+      <div className="container">
+        <div className="row">
+          <div className="col-md-8 col-md-offset-2">
+            <div className="fresh-table full-color card">
+              <div className="toolbar">
                 <button
                   onClick={goBackAction}
                   id="alertBtn"
-                  class="btn btn-default"
+                  className="btn btn-default"
                 >
                   Go Back
                 </button>
-                <div class="col-md-8 col-md-offset-2">
+                <div className="col-md-8 col-md-offset-2">
                   <h3 id="result_header">PIPE SIZING RESULTS (ASME)</h3>
                 </div>
               </div>
 
-              <table id="fresh-table" class="table">
+              <table id="fresh-table" className="table">
                 <thead>
                   <tr>
                     <th data-field="id">ID</th>
@@ -213,16 +213,16 @@ const Results = () => {
               </table>
             </div>
 
-            {/* <div class="description description-footer">
+            {/* <div className="description description-footer">
               <h2 id="sharrreTitle">Thank you for shares!</h2>
               <br />
               <button
                 id="twitter"
-                class="btn btn-info btn-social btn-twitter btn-round btn-fill btn-wd"
+                className="btn btn-info btn-social btn-twitter btn-round btn-fill btn-wd"
               ></button>
               <button
                 id="facebook"
-                class="btn btn-info btn-social btn-facebook btn-round btn-fill btn-wd"
+                className="btn btn-info btn-social btn-facebook btn-round btn-fill btn-wd"
               ></button>
 
               <p>

@@ -1,6 +1,5 @@
 import React from "react";
 
-
 const PumpSpecs = () => {
   return (
     <div className="tab-pane" id="pump_specs">
