@@ -18,7 +18,7 @@ const PumpSpecs = () => {
             <div className="form-group label-floating">
               <label className="control-label">Material</label>
               <select name="country" className="form-control">
-                <option disabled="" selected=""></option>
+                <option disabled="" value=""></option>
                 <option value="Afghanistan"> Afghanistan </option>
                 <option value="Albania"> Albania </option>
                 <option value="Algeria"> Algeria </option>
@@ -35,7 +35,7 @@ const PumpSpecs = () => {
             <div className="form-group label-floating">
               <label className="control-label">Bends</label>
               <select className="form-control">
-                <option disabled="" selected=""></option>
+                <option disabled="" value=""></option>
                 <option>1 Person</option>
                 <option>2 Persons </option>
                 <option>3 Persons</option>
