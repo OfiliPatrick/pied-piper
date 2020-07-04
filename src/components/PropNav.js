@@ -21,13 +21,12 @@ const PropNav = () => {
         </li> */}
         <li>
           <a href="#documentation" data-toggle="tab">
-            Documentation
+            Sizing Description
           </a>
         </li>
       </ul>
     </div>
   );
-}
+};
 
 export default PropNav;
-
