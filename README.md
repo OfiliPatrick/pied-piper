@@ -1,11 +1,8 @@
 # Pied Piper
 
-![GitHub Logo](/images/piedpreview.png)
-Format: ![Pied Piper Software](https://pied-piper-soft.netlify.app/)
+![](https://github.com/OfiliPatrick/pied-piper/blob/master/src/images/piedpreview.png?raw=true)
 
-
-Pipe Sizing Software built with React and a Flask backend
-
+- Pipe Sizing Software built with React and a Flask backend
 ## Introduction
 
 Pied Piper is a pipe sizing software I am currently building as my final year project in college. It is designed to achieve the following:
