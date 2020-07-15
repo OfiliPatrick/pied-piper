@@ -46,61 +46,61 @@ const MainCont = () => {
   }
 
   return (
-    <div className="container">
-      <div className="row">
-        <div className="col-sm-8 col-sm-offset-2">
-          <div className="wizard-container">
-            <div className="card wizard-card" data-color="purple" id="wizard">
-              <form action="" method="">
-                <div className="wizard-header">
-                  <h3 className="wizard-title">Pied Piper</h3>
-                  <h5>Easy to use Pipe Sizing Software.</h5>
-                </div>
-                <PropNav />
-                <div className="tab-content">
-                  <PipeParams />
-                  <FluidCond />
-                  <PumpSpecs />
-                  <Documentation />
-                </div>
-                <div className="wizard-footer">
-                  <div className="pull-right">
-                    <input
-                      type="button"
-                      className="btn btn-next btn-fill btn-primary btn-wd"
-                      name="next"
-                      value="Next"
-                    />
-                    <input
-                      type="button"
-                      className="btn btn-finish btn-fill btn-primary btn-wd"
-                      name="finish"
-                      value="Calculate"
-                      // onClick={(e) => {
-                      //   console.log("i have been clicked ooo");
-                      // }}
-                      onClick={(e) => {
-                        console.log(sizingInfo);
-                        calculatePipeSizeDispatch(sizingInfo);
-                      }}
-                    />
+      <div className="container">
+        <div className="row">
+          <div className="col-sm-8 col-sm-offset-2">
+            <div className="wizard-container">
+              <div className="card wizard-card" data-color="purple" id="wizard">
+                <form action="" method="">
+                  <div className="wizard-header">
+                    <h3 className="wizard-title">Pied Piper</h3>
+                    <h5>Easy to use Pipe Sizing Software.</h5>
                   </div>
-                  <div className="pull-left">
-                    <input
-                      type="button"
-                      className="btn btn-previous btn-fill btn-default btn-wd"
-                      name="previous"
-                      value="Previous"
-                    />
+                  <PropNav />
+                  <div className="tab-content">
+                    <PipeParams />
+                    <FluidCond />
+                    <PumpSpecs />
+                    <Documentation />
                   </div>
-                  <div className="clearfix"></div>
-                </div>
-              </form>
+                  <div className="wizard-footer">
+                    <div className="pull-right">
+                      <input
+                        type="button"
+                        className="btn btn-next btn-fill btn-primary btn-wd"
+                        name="next"
+                        value="Next"
+                      />
+                      <input
+                        type="button"
+                        className="btn btn-finish btn-fill btn-primary btn-wd"
+                        name="finish"
+                        value="Calculate"
+                        // onClick={(e) => {
+                        //   console.log("i have been clicked ooo");
+                        // }}
+                        onClick={(e) => {
+                          console.log(sizingInfo);
+                          calculatePipeSizeDispatch(sizingInfo);
+                        }}
+                      />
+                    </div>
+                    <div className="pull-left">
+                      <input
+                        type="button"
+                        className="btn btn-previous btn-fill btn-default btn-wd"
+                        name="previous"
+                        value="Previous"
+                      />
+                    </div>
+                    <div className="clearfix"></div>
+                  </div>
+                </form>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
   );
 };
 
