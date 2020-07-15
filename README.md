@@ -3,13 +3,14 @@
 ![](https://github.com/OfiliPatrick/pied-piper/blob/master/src/images/piedpreview.png?raw=true)
 
 - Pipe Sizing Software built with React and a Flask backend
+
 ## Introduction
 
 Pied Piper is a pipe sizing software I am currently building as my final year project in college. It is designed to achieve the following:
 
-- [x] Deduce pipe sizing parameter values
-- [x] Accurate calculations due to reduced human error
-- [x] Faster and efficient pipe sizing process
+- Deduce pipe sizing parameter values
+- Accurate calculations due to reduced human error
+- Faster and efficient pipe sizing process
 
 ## Live Demo
 
@@ -18,8 +19,6 @@ Find the live version of this software here [piedpiper.com](https://pied-piper-s
 ## App Preview
 
 ![App Preview gif](https://recordit.co/cG0xjfPI5U.gif)
-
-code gif/screenshot
 
 ## Installation
 
@@ -30,7 +29,7 @@ code gif/screenshot
 - Clone the repository to your local machine using
   `git clone git://github.com/mldangelo/personal-site.git`
 
-### Setup
+### Local Setup
 
 - Install react dependencies and start the application using
 
@@ -40,17 +39,18 @@ npm install
 npm start
 ```
 
-- Navigate to ```http://localhost:3000/ ```.
+- Navigate to `http://localhost:3000/`.
 
 ### Software Usage
 
-1. Ensure all Fields are field
+1. Ensure all parameters and fields are filled
 2. Click on the calculate button
-3. Pipe sizing results are ready
+3. View Pipe sizing results
 
 ### Deployment
 
-npm run build
-Push to Netflify with build folder
+`npm run build`
 
 ### Note
+
+**_This software is still being improved upon_**
