@@ -20,7 +20,7 @@ Find the live version of this software here [piedpiper.com](https://pied-piper-s
 
 ## App Preview
 
-![App Preview gif](https://recordit.co/cG0xjfPI5U)
+![App Preview gif](https://recordit.co/cG0xjfPI5U.gif)
 
 code gif/screenshot
 
