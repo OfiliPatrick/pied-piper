@@ -6,7 +6,7 @@
 
 ## Introduction
 
-Pied Piper is a pipe sizing software I am currently building as my final year project in college. It is designed to achieve the following:
+Pied Piper is a pipe sizing software I built as my final year project in college. It is designed to achieve the following:
 
 - Deduce pipe sizing parameter values.
 - Accurate calculations due to reduced human error.
@@ -20,7 +20,7 @@ Find the live version of this software here: [piedpiper.com](https://pied-piper-
 
 ![App Preview gif](https://recordit.co/cG0xjfPI5U.gif)
 
-## Installation
+## Getting Started
 
 - Node.js must be pre-installed.
 
