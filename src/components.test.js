@@ -12,7 +12,7 @@ const wrapper = () => {
   );
 };
 
-it("PipeParams Test", () => {
+it("handles PipeParams rendering", () => {
   expect(shallow(<wrapper/>).length).toEqual(1);
 });
 

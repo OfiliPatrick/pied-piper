@@ -9,11 +9,11 @@ const initial = {
 };
 
 describe("PipeParams", () => {
-  it("check initial state", () => {
+  it("checks initial state", () => {
     expect(paramsRed(undefined, {})).toEqual(initial);
   });
 
-  it("on pipeParams state change", () => {
+  it("handles pipeParams state change", () => {
     expect(
       paramsRed(initial, {
         type: ON_PIPE_PARAMS_CHANGE,
