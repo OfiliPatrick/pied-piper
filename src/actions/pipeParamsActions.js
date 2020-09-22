@@ -1,4 +1,4 @@
-import {ON_PIPE_PARAMS_CHANGE} from '../actions/types'
+import { ON_PIPE_PARAMS_CHANGE } from '../actions/types';
 
 export const onPipeParamsChange = (fieldId, fieldValue) => {
     return {
