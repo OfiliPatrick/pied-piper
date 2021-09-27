@@ -171,7 +171,7 @@ const Results = () => {
                   </tr>
                   <tr>
                     <td>9</td>
-                    <td>flowRate</td>
+                    <td>Flow Rate</td>
                     <td>Input</td>
                     <td>{today.toDateString()}</td>
                     <td>{flowRate}</td>
