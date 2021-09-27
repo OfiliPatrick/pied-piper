@@ -1,7 +1,7 @@
 import { ON_DOCUMENTATION_CHANGE } from "../actions/types";
 
 const initialState = {
-  docText: 0,
+  docText: "",
 };
 
 export default function (state = initialState, action) {

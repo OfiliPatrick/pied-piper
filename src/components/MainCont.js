@@ -19,7 +19,7 @@ const MainCont = () => {
   const flowRate = useSelector((store) => store.fluidCond.flowRate);
   const density = useSelector((store) => store.fluidCond.density);
   const viscosity = useSelector((store) => store.fluidCond.viscosity);
-  const pumpDischarge = useSelector((store) => store.fluidCond.pumpDischarge);
+  const velocity = useSelector((store) => store.fluidCond.velocity);
   const docText = useSelector((store) => store.documentation.docText);
 
   const sizingInfo = {
@@ -29,7 +29,7 @@ const MainCont = () => {
     flowRate,
     density,
     viscosity,
-    pumpDischarge,
+    velocity,
     docText,
   };
 

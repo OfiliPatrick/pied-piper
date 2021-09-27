@@ -73,7 +73,7 @@ const PipeParams = () => {
                   onPipeParamsChangeDispatch("roughness", e.target.value);
                 }}
               />
-              <span className="input-group-addon">E</span>
+              <span className="input-group-addon">mm</span>
             </div>
           </div>
         </div>

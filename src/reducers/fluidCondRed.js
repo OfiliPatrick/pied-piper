@@ -4,7 +4,7 @@ const initialState = {
   flowRate: -1,
   density: -1,
   viscosity: -1,
-  pumpDischarge: -1,
+  velocity: -1,
 };
 
 export default function (state = initialState, action) {

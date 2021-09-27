@@ -7,7 +7,7 @@ const FluidCond = () => {
   const flowRate = useSelector((store) => store.fluidCond.flowRate);
   const density = useSelector((store) => store.fluidCond.density);
   const viscosity = useSelector((store) => store.fluidCond.viscosity);
-  const pumpDischarge = useSelector((store) => store.fluidCond.pumpDischarge);
+  const velocity = useSelector((store) => store.fluidCond.velocity);
 
   const actionDispatch = useDispatch();
   const onFluidCondChangeDispatch = useCallback(
@@ -33,7 +33,7 @@ const FluidCond = () => {
                   onFluidCondChangeDispatch("flowRate", e.target.value)
                 }
               />
-              <span className="input-group-addon">kg/m2</span>
+              <span className="input-group-addon">m3/hr</span>
             </div>
           </div>
         </div>
@@ -49,7 +49,7 @@ const FluidCond = () => {
                   onFluidCondChangeDispatch("density", e.target.value)
                 }
               />
-              <span className="input-group-addon">p</span>
+              <span className="input-group-addon">kg/m3</span>
             </div>
           </div>
         </div>
@@ -65,27 +65,27 @@ const FluidCond = () => {
                   onFluidCondChangeDispatch("viscosity", e.target.value)
                 }
               />
-              <span className="input-group-addon">u</span>
+              <span className="input-group-addon">kg/m.sec</span>
             </div>
           </div>
         </div>
         <div className="col-sm-5">
           <div className="form-group label-floating">
-            <label className="control-label">Pump Discharge</label>
+            <label className="control-label">Fluid Velocity</label>
             <div className="input-group">
               <input
-                value={pumpDischarge}
+                value={velocity}
                 type="text"
                 className="form-control"
                 onChange={(e) =>
-                  onFluidCondChangeDispatch("pumpDischarge", e.target.value)
+                  onFluidCondChangeDispatch("velocity", e.target.value)
                 }
               />
-              <span className="input-group-addon">kg/m2</span>
+              <span className="input-group-addon">m/s</span>
             </div>
           </div>
         </div>
-        <div className="col-sm-5 col-sm-offset-1">
+        {/* <div className="col-sm-5 col-sm-offset-1">
           <div className="form-group label-floating">
             <label className="control-label">Friction Factor</label>
             <input
@@ -94,7 +94,7 @@ const FluidCond = () => {
               id="exampleInputEmail1"
             />
           </div>
-        </div>
+        </div> */}
         {/* <div className="col-sm-5">
           <div className="form-group label-floating">
             <label className="control-label">Friction Factor</label>
