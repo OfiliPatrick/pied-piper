@@ -102,7 +102,7 @@ const Results = () => {
                     <td>0</td>
                     <td>Int. Diameter (m)</td>
                     <td>Output</td>
-                    <td>Oak</td>
+                    <td>{today.toDateString()}</td>
                     <td>{internal_diameter}</td>
                     <td></td>
                   </tr>
@@ -111,7 +111,7 @@ const Results = () => {
                     <td>1</td>
                     <td>Rel. Roughness</td>
                     <td>Output</td>
-                    <td>Oak</td>
+                    <td>{today.toDateString()}</td>
                     <td>{relative_roughness}</td>
                     <td></td>
                   </tr>
@@ -123,7 +123,7 @@ const Results = () => {
 
                     <td>Output</td>
 
-                    <td>Netherlands</td>
+                    <td>{today.toDateString()}</td>
 
                     <td>{area}</td>
 
@@ -133,7 +133,7 @@ const Results = () => {
                     <td>3</td>
                     <td>Reynolds No</td>
                     <td>Output</td>
-                    <td>Korea, South</td>
+                    <td>{today.toDateString()}</td>
                     <td>{reynolds_number}</td>
                     <td></td>
                   </tr>
@@ -141,7 +141,7 @@ const Results = () => {
                     <td>4</td>
                     <td>Flow Type</td>
                     <td>Output</td>
-                    <td>Malawi</td>
+                    <td>{today.toDateString()}</td>
                     <td>{flow_type}</td>
                     <td></td>
                   </tr>
@@ -149,7 +149,7 @@ const Results = () => {
                     <td>5</td>
                     <td>Documentation</td>
                     <td>Output</td>
-                    <td>Chile</td>
+                    <td>{today.toDateString()}</td>
                     <td>{docText}</td>
                     <td></td>
                   </tr>
@@ -157,7 +157,7 @@ const Results = () => {
                     <td>7</td>
                     <td>Schedule</td>
                     <td>Input</td>
-                    <td>Finland</td>
+                    <td>{today.toDateString()}</td>
                     <td>{schedule}</td>
                     <td></td>
                   </tr>
@@ -165,7 +165,7 @@ const Results = () => {
                     <td>8</td>
                     <td>Straight Length</td>
                     <td>Input</td>
-                    <td>Finland</td>
+                    <td>{today.toDateString()}</td>
                     <td>{straightLength}</td>
                     <td></td>
                   </tr>
@@ -181,7 +181,7 @@ const Results = () => {
                     <td>10</td>
                     <td>Roughness</td>
                     <td>Input</td>
-                    <td>Finland</td>
+                    <td>{today.toDateString()}</td>
                     <td>{roughness}</td>
                     <td></td>
                   </tr>
@@ -197,17 +197,8 @@ const Results = () => {
                     <td>12</td>
                     <td>Viscosity</td>
                     <td>Input</td>
-                    <td>Finland</td>
+                    <td>{today.toDateString()}</td>
                     <td>{viscosity}</td>
-                    <td></td>
-                  </tr>
-
-                  <tr>
-                    <td>13</td>
-                    <td>Alden Chen</td>
-                    <td>$63,929</td>
-                    <td>Finland</td>
-                    <td>Gary</td>
                     <td></td>
                   </tr>
                 </tbody>
