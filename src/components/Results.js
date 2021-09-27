@@ -25,7 +25,8 @@ const Results = () => {
   const flowRate = useSelector((store) => store.fluidCond.flowRate);
   const density = useSelector((store) => store.fluidCond.density);
   const viscosity = useSelector((store) => store.fluidCond.viscosity);
-
+  const timeElapsed = Date.now()
+  const today = new Date(timeElapsed)
 
   // const goBackToHomeDispatch = useDispatch(goBackToHome)
 
@@ -172,7 +173,7 @@ const Results = () => {
                     <td>9</td>
                     <td>flowRate</td>
                     <td>Input</td>
-                    <td>Finland</td>
+                    <td>{today.toDateString()}</td>
                     <td>{flowRate}</td>
                     <td></td>
                   </tr>
@@ -188,7 +189,7 @@ const Results = () => {
                     <td>11</td>
                     <td>Density</td>
                     <td>Input</td>
-                    <td>Finland</td>
+                    <td>{today.toDateString()}</td>
                     <td>{density}</td>
                     <td></td>
                   </tr>

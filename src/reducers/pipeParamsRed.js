@@ -1,10 +1,10 @@
 import { ON_PIPE_PARAMS_CHANGE } from "../actions/types";
 
 const initialState = {
-  schedule: "",
-  straightLength: "",
-  roughness: "",
-  material: ""
+  schedule: -1,
+  straightLength: -1,
+  roughness: -1,
+  material: -1
 };
 
 export default function (state = initialState, action) {

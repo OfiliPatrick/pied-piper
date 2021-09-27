@@ -1,10 +1,10 @@
 import { ON_FLUID_COND_CHANGE } from "../actions/types";
 
 const initialState = {
-  flowRate: "",
-  density: "",
-  viscosity: "",
-  pumpDischarge: "",
+  flowRate: -1,
+  density: -1,
+  viscosity: -1,
+  pumpDischarge: -1,
 };
 
 export default function (state = initialState, action) {
